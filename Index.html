@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/Script.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/lodash/lodash.js"></script>
+    <title></title>
+</head>
+<body onload="Startup();">
+    <button name="shuffle" onclick="Shuffle();">Shuffle!</button>
+    <button name="sort" onclick="Sort();">Sort!</button>
+    <button name="deletelast" onclick="DeleteLast();">Delete last</button>
+    <button name="deletefirst" onclick="DeleteFirst();">Delete first</button>
+    <button name="double" onclick="Double();">Double!!!</button>
+    <button name="unique" onclick="Unique();">Unique</button>
+    <form style="display: flex; flex-direction: column; width: 200px;">
+        <label>Name</label>
+        <input type="text" name="name">
+        <label>Property</label>
+        <input type="text" name="property">
+        <button name="add" type="button" onclick="Add(this.form.name.value, this.form.property.value)">Add!</button>
+    </form>
+    <form style="display: flex; flex-direction: column; width: 150px; margin-top: 10px;">
+        <label>Remove by name</label>
+        <input type="text" name="name">
+        <button name="rbm" type="button" onclick="RemoveByName(this.form.name.value)">Remove!</button>
+    </form>
+    <form style="display: flex; flex-direction: column; width: 150px; margin-top: 10px;">
+        <label>Remove by property</label>
+        <input type="text" name="property">
+        <button name="rbp" type="button" onclick="RemoveByProperty(this.form.property.value)">Remove!</button>
+    </form>
+    <ul></ul>
+</body>
+</html>
